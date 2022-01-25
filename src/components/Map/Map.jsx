@@ -25,9 +25,7 @@ const Map = ({ setCoordinates, setBounds, coordinates, places, setChildCliked}) 
             setBounds({ ne : event.marginBounds.ne, sw : event.marginBounds.sw})
             }
           }
-        onChildClick={(child) => {
-          setChildCliked
-        }} > 
+        onChildClick={(child) =>  setChildCliked(child)} > 
       {
         places?.map((place, index) => (
           <div className={classes.markerContainer} lat={(Number(place.latitude))} lng={Number(place.longitude)} key={index}>
